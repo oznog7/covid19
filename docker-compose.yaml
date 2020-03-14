@@ -1,0 +1,10 @@
+version: '3'
+services:
+  web:
+    build: ./docker/portal.Dockerfile
+    container_name: dg_portal
+    ports:
+      - "8000"
+    volumes:
+      - ./covid19/:/app/
+    
