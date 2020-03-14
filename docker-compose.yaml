@@ -1,0 +1,14 @@
+version: '3'
+services:
+  web:
+    build: 
+      context: ./covid19/
+      dockerfile: covid19.Dockerfile
+    image: covid19:0.1
+    container_name: dg_portal
+    ports:
+      - "8000"
+    volumes:
+      - ./covid19/:/app/
+    tty: true
+    
