@@ -4,6 +4,10 @@ from django.db import models
 
 class Question(models.Model):
     question = models.TextField(blank=True, null=True)
+    questiontype = models.ForeignKey('Questiontype')
+
+class Questiontype(models.Model):
+    type = models.TextField()
 
 class Location(models.Model):
     place = models.TextField(blank=True)
