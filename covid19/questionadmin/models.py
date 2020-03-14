@@ -13,12 +13,12 @@ class Location(models.Model):
 class Participant(models.Model):
     firstName = models.TextField()
     lastName = models.TextField()
-    location = models.ForeignKey('Location')
+    location = models.ForeignKey('Location', models.DO_NOTHING)
 
 
 class Answer(models.Model):
-    question = models.ForeignKey('Question')
-    participant = models.ForeignKey('Participant')
+    question = models.ForeignKey('Question', models.DO_NOTHING)
+    participant = models.ForeignKey('Participant', models.DO_NOTHING)
     scale_Answer = models.IntegerField()
     dateFrom = models.DateTimeField()
     dateTo = models.DateTimeField()
