@@ -23,3 +23,13 @@ class Answer(models.Model):
     dateFrom = models.DateTimeField()
     dateTo = models.DateTimeField()
     freeform_text = models.TextField()
+
+class  Health(models.Model):
+    participant = models.ForeignKey('Participant')
+    issue = models.ForeignKey('Issue')
+    severity = models.IntegerField()
+
+class Issue(models.Model)
+    medical_term  = models.TextField()
+    common_term = models.TextField()
+    external_classification_code = models.TextField()
