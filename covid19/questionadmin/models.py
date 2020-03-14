@@ -26,10 +26,10 @@ class Answer(models.Model):
 
 class  Health(models.Model):
     participant = models.ForeignKey('Participant')
-    issue = models.ForeignKey('Issue')
+    issue = models.ForeignKey('GlobalHealthSchema')
     severity = models.IntegerField()
 
-class Issue(models.Model)
+class GlobalHealthSchema(models.Model):
     medical_term  = models.TextField()
     common_term = models.TextField()
     external_classification_code = models.TextField()
